@@ -118,6 +118,12 @@ public class Omayo {
 
         pause(2);
 
+        WebElement delayedCheckBox = driver.findElement(By.xpath("//button[contains(text(),'Check this')]"));
+        delayedCheckBox.click();
+
+        pause(10);
+        WebElement checkboxDelayed = driver.findElement(By.xpath("//input[@id='dte']"));
+        checkboxDelayed.click();
         driver.quit();
     }
 
